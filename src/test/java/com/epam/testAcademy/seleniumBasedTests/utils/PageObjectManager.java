@@ -1,10 +1,10 @@
-package utils;
+package com.epam.testAcademy.seleniumBasedTests.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import pagepobjects.LoginPage;
-import pagepobjects.MainPage;
-import pagepobjects.PasswordPage;
+import com.epam.testAcademy.seleniumBasedTests.pagepobjects.LoginPage;
+import com.epam.testAcademy.seleniumBasedTests.pagepobjects.MainPage;
+import com.epam.testAcademy.seleniumBasedTests.pagepobjects.PasswordPage;
 
 /**
  * Created by Dariusz_Kozon on 12-Jan-17.

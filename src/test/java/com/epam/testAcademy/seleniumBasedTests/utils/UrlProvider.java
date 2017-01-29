@@ -1,4 +1,4 @@
-package utils;
+package com.epam.testAcademy.seleniumBasedTests.utils;
 
 /**
  * Created by Dariusz_Kozon on 16-Jan-17.

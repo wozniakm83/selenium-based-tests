@@ -1,10 +1,10 @@
-package pagepobjects;
+package com.epam.testAcademy.seleniumBasedTests.pagepobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.BasePage;
-import utils.CustomWait;
+import com.epam.testAcademy.seleniumBasedTests.utils.BasePage;
+import com.epam.testAcademy.seleniumBasedTests.utils.CustomWait;
 
 /**
  * Created by Dariusz_Kozon on 16-Jan-17.

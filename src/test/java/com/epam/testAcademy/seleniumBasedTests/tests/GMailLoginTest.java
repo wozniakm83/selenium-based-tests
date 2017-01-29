@@ -1,4 +1,4 @@
-package tests;
+package com.epam.testAcademy.seleniumBasedTests.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -6,15 +6,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import utils.PageObjectManager;
-import utils.UrlProvider;
+import com.epam.testAcademy.seleniumBasedTests.utils.PageObjectManager;
+import com.epam.testAcademy.seleniumBasedTests.utils.UrlProvider;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Created by Dariusz_Kozon on 12-Jan-17.
  */
-public class GmailLoginTest {
+public class GMailLoginTest {
 
     private WebDriver webDriver;
     private PageObjectManager manager;

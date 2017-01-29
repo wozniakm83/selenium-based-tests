@@ -1,4 +1,4 @@
-package utils;
+package com.epam.testAcademy.seleniumBasedTests.utils;
 
 import org.openqa.selenium.WebDriver;
 
