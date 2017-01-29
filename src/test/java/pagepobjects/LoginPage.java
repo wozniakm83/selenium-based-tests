@@ -1,5 +1,6 @@
 package pagepobjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,8 +15,7 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = ".//input[@id='Email']")
     private WebElement emailField;
 
-    @FindBy(id = "next")
-    private WebElement nextButton;
+    private By nextButton = By.id("next");
 
     private CustomWait customWait;
 
@@ -30,13 +30,13 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage clickNextButton() {
-        nextButton.click();
+        webDriver.findElement(nextButton);
         return this;
     }
 
     @Override
     public boolean isLoaded() {
-        return customWait.isElementPresent(emailField) && customWait.isElementPresent(nextButton);
+        return customWait.isElementPresent(emailField) && customWait.isElementPresent(webDriver.findElement(nextButton));
     }
 
 }
