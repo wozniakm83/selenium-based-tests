@@ -1,13 +1,13 @@
 package com.epam.testAcademy.seleniumBasedTests.tests;
 
+import com.epam.testAcademy.seleniumBasedTests.utils.PageObjectManager;
+import com.epam.testAcademy.seleniumBasedTests.utils.UrlProvider;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import com.epam.testAcademy.seleniumBasedTests.utils.PageObjectManager;
-import com.epam.testAcademy.seleniumBasedTests.utils.UrlProvider;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -22,7 +22,8 @@ public class GMailLoginTest {
 
     @BeforeMethod
     private void setUp() {
-        webDriver = new FirefoxDriver();
+        //System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        webDriver = new ChromeDriver();
         manager = new PageObjectManager(webDriver);
         url = UrlProvider.GOOGLE_MAIN.getUrl();
     }
@@ -34,7 +35,7 @@ public class GMailLoginTest {
         }
     }
 
-    @Test(dataProvider = "loginGmailData")
+    @Test(dataProvider = "loginGMailData")
     public void shouldNotLoggedInTest(String login, String password) {
         manager.mainPage()
                 .loadPage(url);
@@ -53,7 +54,7 @@ public class GMailLoginTest {
                 .signInButtonClick();
     }
 
-    @DataProvider(name = "loginGmailData")
+    @DataProvider(name = "loginGMailData")
     public Object[][] testData() {
         return new Object[][]{
                 {"epam321", "testtest1"}

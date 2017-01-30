@@ -17,6 +17,8 @@ public class LoginPage extends BasePage {
 
     private By nextButton = By.id("next");
 
+    private WebElement nextButtonElement = webDriver.findElement(nextButton);
+
     private CustomWait customWait;
 
     public LoginPage(WebDriver webDriver) {
