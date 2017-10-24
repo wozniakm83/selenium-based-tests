@@ -21,7 +21,7 @@ public class DragAndDropTest extends BaseTest {
         manager = new PageObjectTheInternetManager(webDriver);
     }
 
-    @BeforeMethod (enabled = false)
+    @BeforeMethod (enabled = true)
     private void startUp() {
         url = UrlProvider.THE_INTERNET.getUrl();
     }
