@@ -3,6 +3,7 @@ package net.kozon.selenium.example.test.framework.common.utils;
 import net.kozon.selenium.example.test.framework.internet.pageObjects.DragAndDropPage;
 import net.kozon.selenium.example.test.framework.internet.pageObjects.FileUploadPage;
 import net.kozon.selenium.example.test.framework.internet.pageObjects.MainPage;
+import net.kozon.selenium.example.test.framework.internet.pageObjects.WysiwygPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,6 +16,7 @@ public class PageObjectTheInternetManager {
     private MainPage mainPage;
     private FileUploadPage fileUploadPage;
     private DragAndDropPage dragAndDropPage;
+    private WysiwygPage wysiwygPage;
 
     public PageObjectTheInternetManager(WebDriver webDriver) {
         this.webDriver = webDriver;
@@ -39,5 +41,12 @@ public class PageObjectTheInternetManager {
             dragAndDropPage = PageFactory.initElements(webDriver, DragAndDropPage.class);
         }
         return dragAndDropPage;
+    }
+
+    public WysiwygPage getWysiwygPage() {
+        if (wysiwygPage == null) {
+            wysiwygPage = PageFactory.initElements(webDriver, WysiwygPage.class);
+        }
+        return wysiwygPage;
     }
 }

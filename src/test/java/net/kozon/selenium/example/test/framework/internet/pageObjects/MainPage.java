@@ -22,6 +22,9 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//a[contains(text(), 'Drag and Drop')]")
     private WebElement dragAndDropLink;
 
+    @FindBy(xpath = "//a[contains(text(), 'WYSIWYG')]")
+    private WebElement wysiwygLink;
+
     public MainPage(WebDriver webDriver) {
         super(webDriver);
         customWait = new CustomWait(webDriver);
@@ -34,6 +37,11 @@ public class MainPage extends BasePage {
 
     public MainPage clickDragAndDropLink() {
         dragAndDropLink.click();
+        return this;
+    }
+
+    public MainPage clickWysiwygLink() {
+        wysiwygLink.click();
         return this;
     }
 

@@ -1,17 +1,10 @@
-{  “capabilities”: [{
-
-“browserName”: “firefox”,
-
-“platform”: “WINDOWS”,
-
-“maxInstances”: 1
-
-}],
-
-“maxSession”: 5,
-
-“port”: 5555,
-
-“register”: true
-
+{
+  "capabilities": [{
+    "browserName": "firefox",
+    "platform": "WINDOWS",
+    "maxInstances": 1
+  }],
+  "maxSession": 5,
+  "port": 5555,
+  "register": true
 }
